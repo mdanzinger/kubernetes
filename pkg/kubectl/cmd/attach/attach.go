@@ -1,12 +1,9 @@
 /*
 Copyright 2014 The Kubernetes Authors.
-
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
-
     http://www.apache.org/licenses/LICENSE-2.0
-
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -24,7 +21,6 @@ import (
 
 	"github.com/golang/glog"
 	"github.com/spf13/cobra"
-
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
@@ -43,14 +39,11 @@ var (
 	attachExample = templates.Examples(i18n.T(`
 		# Get output from running pod 123456-7890, using the first container by default
 		kubectl attach 123456-7890
-
 		# Get output from ruby-container from pod 123456-7890
 		kubectl attach 123456-7890 -c ruby-container
-
 		# Switch to raw terminal mode, sends stdin to 'bash' in ruby-container from pod 123456-7890
 		# and sends stdout/stderr from 'bash' back to the client
 		kubectl attach 123456-7890 -c ruby-container -i -t
-
 		# Get output from the first pod of a ReplicaSet named nginx
 		kubectl attach rs/nginx
 		`))
