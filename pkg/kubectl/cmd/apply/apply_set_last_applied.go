@@ -1,12 +1,9 @@
 /*
 Copyright 2017 The Kubernetes Authors.
-
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
-
     http://www.apache.org/licenses/LICENSE-2.0
-
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -21,7 +18,6 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/apimachinery/pkg/runtime"
@@ -72,10 +68,8 @@ var (
 	applySetLastAppliedExample = templates.Examples(i18n.T(`
 		# Set the last-applied-configuration of a resource to match the contents of a file.
 		kubectl apply set-last-applied -f deploy.yaml
-
 		# Execute set-last-applied against each configuration file in a directory.
 		kubectl apply set-last-applied -f path/
-
 		# Set the last-applied-configuration of a resource to match the contents of a file, will create the annotation if it does not already exist.
 		kubectl apply set-last-applied -f deploy.yaml --create-annotation=true
 		`))
